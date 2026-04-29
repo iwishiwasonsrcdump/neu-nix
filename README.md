@@ -22,6 +22,7 @@ The packages this flake currently provides are:
 - `tohu`
 - `neuwm`
 - `wsxwm`
+- `klatka`
 
 ### Compositors
 
