@@ -21,8 +21,8 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~shrub900";
     repo = "tohu";
-    rev = "9236a46f77799ff10b7ce630f44c6cde4af8b95b";
-    hash = "sha256-hOaqxzrJMtjnhbClzULWM8BhtMa5l07z6KOlNbHxaVM=";
+    rev = "ff0b0d12d3f37b9431a39cfb2389e68c5c0f605e";
+    hash = "sha256-Eu/sBNs6CoQrnQZNhf3xHA/Hyu3s9jH8+Mxcz9wAN6g=";
   };
 
   nativeBuildInputs = [
