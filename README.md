@@ -1,6 +1,6 @@
 ## neu-nix
 
-A nix flake for neuswc and neuwld packages (shko, neumenu, hack, swall...).
+A nix flake for neuswc and neuwld packages (hevel, howl, mojito...).
 
 ### Packages
 
@@ -13,7 +13,6 @@ The packages this flake currently provides are:
 - `hevel`
 - `slgro`
 - `howl`
-- `swall`
 - `hack`
 - `swclock`
 - `swiv`
@@ -76,9 +75,9 @@ Alternatively, you can use the flake's overlay:
   ];
 
   environment.systemPackages = [
-    shko
+    hevel
     neumenu
-    swall
+    mojito
   ];
   #...
 ```

@@ -31,7 +31,6 @@ let
     howl = wrapWithSwcLaunch self.neuswc (self.callPackage ./howl { });
     slgro = wrapWithSwcLaunch self.neuswc (self.callPackage ./slgro { });
     klatka = wrapWithSwcLaunch self.neuswc (self.callPackage ./klatka { });
-    swall = self.callPackage ./swall { };
     hack = self.callPackage ./hack { };
     swclock = self.callPackage ./swclock { };
     swiv = self.callPackage ./swiv { };
@@ -47,7 +46,6 @@ in
     neumenu
     shko
     hevel
-    swall
     hack
     swclock
     swiv
