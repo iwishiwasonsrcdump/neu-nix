@@ -10,7 +10,7 @@
   libxkbcommon,
   libxcb,
   libxcb-wm,
-  zig,
+  zig_0_15,
   neuswc,
   neuwld,
   configZig ? null,
@@ -26,7 +26,7 @@ stdenv.mkDerivation {
     hash = "sha256-+jNlmGoKe58SKVY85UYF1s2fnMuPvE62wC+O3aAT4Gw=";
   };
 
-  nativeBuildInputs = [ zig.hook ];
+  nativeBuildInputs = [ zig_0_15.hook ];
   dontSetZigDefaultFlags = true;
 
   buildInputs = [
