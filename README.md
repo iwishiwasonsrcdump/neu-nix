@@ -1,8 +1,10 @@
-## neu-nix
+# neu-nix
+
+[![Flake Check](https://github.com/ricardomaps/neu-nix/actions/workflows/test.yml/badge.svg)](https://github.com/ricardomaps/neu-nix/actions/workflows/test.yml)
 
 A nix flake for neuswc and neuwld packages (hevel, howl, mojito...).
 
-### Packages
+## Packages
 
 The packages this flake currently provides are:
 
@@ -24,7 +26,7 @@ The packages this flake currently provides are:
 - `klatka`
 - `wawa`
 
-### Compositors
+## Compositors
 
 You can use the compositors in this flake in two ways. If you add neuswc to your system packages, you can launch them with swc-launch:
 
@@ -38,7 +40,7 @@ Or, you can use a wrapper script that calls swc-launch for you, no need to add n
 sudo shko-launch
 ```
 
-### Installation
+## Installation
 
 Add the flake as an input to your own system flake:
 
@@ -84,7 +86,7 @@ Alternatively, you can use the flake's overlay:
 
 Take a look [here](https://wayland.fyi/) for information about the packages, what they are and how to use them.
 
-### Configuring
+## Configuring
 
 Configuration can be done by overriding the package and passing in either a path to a config file, a derivation or just write the config inline.
 For example to configure shko you can either do:
@@ -108,7 +110,7 @@ pkgs.shko.override {
 
 Take a look at the default.nix file for the specific package you want to configure to see what argument is expected for the config.
 
-### Contribute
+## Contribute
 
 Make a pull request with the package you want to contribute. Again, take a look [here](https://wayland.fyi/) for a list of packages that could be added here.
 Familiarize yourself with the structure of the repo, write the package definition in the callPackage pattern and add it to packages/default.nix.
