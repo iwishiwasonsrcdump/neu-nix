@@ -18,7 +18,7 @@ stdenv.mkDerivation {
     owner = "~wf";
     repo = "howl";
     rev = "52b7ba38135093b945079a93ee599c91f5e5e317";
-    hash = "sha256-Lsv25r0nCNOEcYvq+62p/kIsAAM7MWr87yfNto+W6V0=;
+    hash = "sha256-Lsv25r0nCNOEcYvq+62p/kIsAAM7MWr87yfNto+W6V0=";
   };
 
   nativeBuildInputs = [
