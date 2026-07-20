@@ -15,6 +15,8 @@ The packages this flake currently provides are:
 - `klatka`
 - `mojito`
 - `neubar`
+- `neucolor`
+- `neuipc`
 - `neuswc`
 - `neumenu`
 - `neuwld`
