@@ -31,6 +31,7 @@ let
     howl = wrapWithSwcLaunch self.neuswc (self.callPackage ./howl { });
     slgro = wrapWithSwcLaunch self.neuswc (self.callPackage ./slgro { });
     klatka = wrapWithSwcLaunch self.neuswc (self.callPackage ./klatka { });
+    mot = wrapWithSwcLaunch self.neuswc (self.callPackage ./mot { });
     hack = self.callPackage ./hack { };
     swclock = self.callPackage ./swclock { };
     swiv = self.callPackage ./swiv { };
@@ -66,5 +67,6 @@ in
     uxn12
     neubar
     neucolor
+    mot
     ;
 }
