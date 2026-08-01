@@ -40,6 +40,7 @@ let
     wawa = self.callPackage ./wawa { };
     neuipc = self.callPackage ./neuipc { };
     uxn12 = self.callPackage ./uxn12 { };
+    cotton = self.callPackage ./cotton { };
     neubar = self.callPackage ./neubar { };
     neucolor = self.callPackage ./neucolor { };
   });
@@ -68,5 +69,6 @@ in
     neubar
     neucolor
     mot
+    cotton
     ;
 }
