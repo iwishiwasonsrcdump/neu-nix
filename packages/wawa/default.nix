@@ -13,8 +13,8 @@ stdenv.mkDerivation {
   src = fetchFromCodeberg {
     owner = "sewn";
     repo = "wawa";
-    rev = "249f43876d05f73cc1ba9c51235a32f058478e8c";
-    hash = "sha256-3fF5U4EdXgbAFF55+Etl6ZcTPGLCU804FblVJvpNe3c=";
+    rev = "e6d23e7e095b2055266a138485348bf97deebe06";
+    hash = "sha256-Uxl0tOS6CG2wNOEoShAJY4BcUS31dG2jaSOLUI1ZE/U=";
   };
 
   env.NIX_CFLAGS_COMPILE = "-Wno-incompatible-pointer-types";
