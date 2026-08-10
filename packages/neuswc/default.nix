@@ -22,8 +22,6 @@
   xwaylandSupport ? true,
   extra ? true,
   example ? false,
-  evdev-keyboard ? "/dev/input/event0",
-  evdev-pointer ? "/dev/input/event1",
 }:
 stdenv.mkDerivation {
   pname = "neuswc";
@@ -32,8 +30,8 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~shrub900";
     repo = "neuswc";
-    rev = "685599f83287440381a42e0fa3a351ef861605cb";
-    hash = "sha256-DlK3HAoQYkn1YsrolBGQfGDeG0FuiodSDihbBbGZvBQ=";
+    rev = "caeb60459da0c41c25d011073204d82bc30d0205";
+    hash = "sha256-XgMuvkaNulFmt0Gi8zQD83KKKCU5hAJ0FHDbOY6JY6I=";
   };
 
   nativeBuildInputs = [
@@ -66,16 +64,9 @@ stdenv.mkDerivation {
   mesonFlags = [
     "-Dextra=${lib.boolToString extra}"
     "-Dexample=${lib.boolToString example}"
-    "-Devdev-keyboard=${evdev-keyboard}"
-    "-Devdev-pointer=${evdev-pointer}"
   ];
 
   inherit patches;
-
-  postInstall = ''
-    mkdir -p $out/include
-    wayland-scanner client-header $src/protocol/swc.xml $out/include/swc-client-protocol.h
-  '';
 
   meta = {
     description = "Fork of swc for hevel window manager";
