@@ -14,19 +14,21 @@
   libinput,
   libxkbcommon,
   fontconfig,
+  ninja
 }:
 stdenv.mkDerivation {
   pname = "tohu";
-  version = "unstable-2026-03-20";
+  version = "0.0";
   src = fetchFromSourcehut {
     owner = "~shrub900";
     repo = "tohu";
-    rev = "1e300018f795c6a84990b3eda8e51fd41fb6aeaf";
-    hash = "sha256-wCx1L2YJXpnueoJSZQAJbJ/W01ksw3nUuEBdHWDeqCw=";
+    rev = "7c33428dbce080f8654aac544cfc5e4e628495ba";
+    hash = "sha256-24qWIcbnSUDzz3qTgsM1fCk/3ikleIZRqj0BOFkmZYo=";
   };
 
   nativeBuildInputs = [
     pkg-config
+    ninja
   ];
 
   buildInputs = [
@@ -43,16 +45,20 @@ stdenv.mkDerivation {
     fontconfig
   ];
 
-  postPatch = ''
-    substituteInPlace Makefile \
-      --replace "-fcolor-diagnostics" ""
+  buildPhase = ''
+    ninja
   '';
 
   installPhase = ''
-    runHook preInstall
-    mkdir -p $out/bin
-    cp tohu $out/bin/tohu
-    runHook postInstall
+    PREFIX=$out ninja install
+  '';
+
+  # screw shrub we dynamic link
+  patchPhase = ''
+    substituteInPlace build.ninja \
+      --replace-fail \
+        'pkg-config --static --libs' \
+        'pkg-config --libs'
   '';
 
   meta = {
