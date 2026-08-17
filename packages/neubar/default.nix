@@ -9,8 +9,8 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~pfr";
     repo = "neubar";
-    rev = "7822b8299c929bcedfeb1d5385f9fe858e16f7b9";
-    hash = "sha256-ywPb7yKBQUD5TufNuJUdGyH+tUtNjB8809GKZsSKiWM=";
+    rev = "5def1995181f983b34579a911bd05a0461493ca0";
+    hash = "sha256-5rTX7xYG2DQtGyhNFfEaF/isUtubpoiRFlPVkWWBWYo=";
   };
 
   makeFlags = [
