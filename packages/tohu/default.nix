@@ -45,13 +45,7 @@ stdenv.mkDerivation {
     fontconfig
   ];
 
-  buildPhase = ''
-    ninja
-  '';
-
-  installPhase = ''
-    PREFIX=$out ninja install
-  '';
+  preInstall = "export PREFIX=$out";
 
   # screw shrub we dynamic link
   patchPhase = ''
