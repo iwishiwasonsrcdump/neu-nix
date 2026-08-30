@@ -5,6 +5,7 @@
   pixman,
   wayland,
   wayland-scanner,
+  wayland-protocols,
   pkg-config,
   libdrm,
   neuwld,
@@ -18,13 +19,14 @@ stdenv.mkDerivation {
   src = fetchFromSourcehut {
     owner = "~dlm";
     repo = "mojito";
-    rev = "91c59d430f0359c44a3a0413cc72ec5d769cd86c";
-    hash = "sha256-nxoo/+3AaIVvDESYL1JDJflU/uXitFl84zj5CsCjhvk=";
+    rev = "5e6a307ec812ce6d7ecd66916cf4658afb19420e";
+    hash = "sha256-wEggHpGKpR9oJvRVbyYeqjO683XaOL47czHGqPSoXKo=";
   };
 
   nativeBuildInputs = [
     pkg-config
     wayland-scanner
+    wayland-protocols
   ];
 
   buildInputs = [
@@ -39,7 +41,6 @@ stdenv.mkDerivation {
 
   makeFlags = [
     "PREFIX=$(out)"
-    "DESTDIR=$(out)"
   ];
 
   meta = {
